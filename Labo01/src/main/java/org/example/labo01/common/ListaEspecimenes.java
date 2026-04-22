@@ -78,6 +78,17 @@ public class ListaEspecimenes {
                 .posibleBrote("Aulas B")
                 .build()
         );
+
+        this.especimenes.add(Especimen.builder()
+                .nombre("Licker")
+                .virusBase("G-virus")
+                .nivelPeligro(3)
+                .puntoDebil("Torso")
+                .estado("En libertad")
+                .ubicacion("Pueblo")
+                .posibleBrote("ICAS")
+                .build()
+        );
     }
 
     public List<Especimen> getEspecimenes(){
