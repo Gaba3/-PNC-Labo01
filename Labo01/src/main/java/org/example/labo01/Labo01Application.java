@@ -39,41 +39,41 @@ public class Labo01Application {
 				System.out.println("3. Ver Virus Activos (Sin repetición)");
 				System.out.println("4. Salir");
 				System.out.print("Seleccione una opción: ");
-			}
 
-			String opcion = scanner.nextLine();
+				String opcion = scanner.nextLine();
 
-			switch (opcion) {
-				case "1":
-					System.out.print("Ingrese el nombre del Virus (T-virus, G-virus, etc): ");
-					String virus = scanner.nextLine();
-					filterByVirus.filterbyvirus(virus).forEach(e->
-							System.out.println("[S.T.A.R.S-REPORT] Nombre: " + e.getNombre() +
-							" | Nivel de Peligro: " + e.getNivelPeligro() +
-							" | Punto Debil: " + e.getPuntoDebil())
-					);
-					break;
-				case "2":
-					System.out.print("Ingrese el estado (Contenido, En libertad, Eliminado): ");
-					String estado = scanner.nextLine();
-					filterByEstatus.filterbyestatus(estado).forEach(e->
-							System.out.println("[S.T.A.R.S-REPORT] Nombre: " + e.getNombre() +
-									" | Nivel de Peligro: " + e.getNivelPeligro() +
-									" | Punto Debil: " + e.getPuntoDebil())
-					);
-					break;
-				case "3":
-					System.out.println("Reporte de Virus con especímenes en libertad:");
-					activeVirus.activevirus().forEach(e->
-							System.out.println("[S.T.A.R.S-REPORT] Virus: " + e)
-					);
-					break;
-				case "4":
-					continuar = false;
-					System.out.println("Cerrando menu...");
-					break;
-				default:
-					System.out.println("Opción no válida.");
+				switch (opcion) {
+					case "1":
+						System.out.print("Ingrese el nombre del Virus (T-virus, G-virus, Las Plagas o Cadou): ");
+						String virus = scanner.nextLine();
+						filterByVirus.filterbyvirus(virus).forEach(e->
+								System.out.println("[S.T.A.R.S-REPORT] Nombre: " + e.getNombre() +
+										" | Nivel de Peligro: " + e.getNivelPeligro() +
+										" | Punto Debil: " + e.getPuntoDebil())
+						);
+						break;
+					case "2":
+						System.out.print("Ingrese el estado (Contenido, En libertad, Eliminado): ");
+						String estado = scanner.nextLine();
+						filterByEstatus.filterbyestatus(estado).forEach(e->
+								System.out.println("[S.T.A.R.S-REPORT] Nombre: " + e.getNombre() +
+										" | Nivel de Peligro: " + e.getNivelPeligro() +
+										" | Punto Debil: " + e.getPuntoDebil())
+						);
+						break;
+					case "3":
+						System.out.println("Reporte de Virus con especímenes en libertad:");
+						activeVirus.activevirus().forEach(e->
+								System.out.println("[S.T.A.R.S-REPORT] Virus: " + e)
+						);
+						break;
+					case "4":
+						continuar = false;
+						System.out.println("Cerrando menu...");
+						break;
+					default:
+						System.out.println("Opción no válida.");
+				}
 			}
 		};
 	}
