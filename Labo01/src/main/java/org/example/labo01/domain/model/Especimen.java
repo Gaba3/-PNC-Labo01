@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class Especimen {
-    private String Nombre;
-    private String Virus_base;
-    private int nivel_peligro;
-    private String Punto_debil;
-    private String Estado;
-    private String Ubicacion;
-    private String Posible_brote;
+    private String nombre;
+    private String virusBase;
+    private int nivelPeligro;
+    private String puntoDebil;
+    private String estado;
+    private String ubicacion;
+    private String posibleBrote;
 
 }
